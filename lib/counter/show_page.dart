@@ -34,7 +34,7 @@ class CounterShowPage extends HookConsumerWidget {
             tooltip: 'Increment',
             child: const Icon(Icons.add),
           ),
-          SizedBox(width: 80,),
+          const SizedBox(width: 80,),
           FloatingActionButton(
            // onPressed: () {
            //   ref.read(counterControllerProvider.notifier).decrement();
@@ -42,6 +42,15 @@ class CounterShowPage extends HookConsumerWidget {
             onPressed: ref.read(counterControllerProvider.notifier).decrement,
             tooltip: 'decrement',
             child: const Icon(Icons.remove),
+          ),
+          const SizedBox(width: 80,),
+          FloatingActionButton(
+            // onPressed: () {
+            //   ref.read(counterControllerProvider.notifier).decrement();
+            //},
+            onPressed: ref.read(counterControllerProvider.notifier).reset,
+            tooltip: 'reset',
+            child: const Icon(Icons.lock_reset),
           ),
         ],
       ),

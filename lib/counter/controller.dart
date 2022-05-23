@@ -17,4 +17,8 @@ class CounterController extends StateNotifier<Counter>{
     state = Counter(state.count - 1);
   }
 
+  void reset(){
+    state = const Counter(0);
+  }
+
 }
